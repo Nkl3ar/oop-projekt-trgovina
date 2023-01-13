@@ -4,12 +4,21 @@ using std::string;
 
 class Proizvod
 {
+
 private:
+    double validCijena(const float cijena)
+        {
+            if (cijena < 0)
+                return 0;
+            return cijena;
+        }
+
+protected:
     string ime;
     float cijena;
 
 public:
-    Proizvod(string ime, float cijena) : ime(ime), cijena(cijena) {}
+    Proizvod(string ime, float cijena) : ime(ime), cijena(validCijena(cijena)) {}
     Proizvod(string ime)
     {
         this->ime = ime;
@@ -21,7 +30,7 @@ public:
     {
         return ime;
     }
-    void setIme(string const ime)
+    void setIme(const string ime)
     {
         this->ime = ime;
     }
@@ -31,11 +40,11 @@ public:
         return cijena;
     }
 
-    void setCijena(float const cijena)
+    void setCijena(const float cijena)
     {
-        this->cijena = cijena;
+        this->cijena = validCijena(cijena);
     }
-    
+
     virtual bool operator==(Proizvod &p)
     {
         if (cijena == p.getCijena())
@@ -43,12 +52,56 @@ public:
                 return true;
         return false;
     }
+
+    void info()
+    {
+        cout << "Ime: " << ime << endl;
+        cout << "Cijena: " << cijena << endl;
+    }
+};
+
+class Kamen : public Proizvod{
+    private:
+        float validTezina(const float tezina)
+        {
+            if(tezina<0)
+                return 0;
+            return tezina;
+        }
+    protected:
+        string tip;
+        float tezina;
+    public:
+        Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime,cijena), tip(tip), tezina(validTezina(tezina)){}
+        const string getTip()
+        {
+            return tip;
+        }
+        void setTip(string tip)
+        {
+            this->tip = tip;
+        }
+        const float getTezina()
+        {
+            return tezina;
+        }
+        void setTezina(float tezina)
+        {
+            this->tezina=tezina;
+        }
+        void info()
+        {
+            Proizvod::info();
+            cout << "Tip: " << tip << endl;
+            cout << "Tezina: " << tezina << endl;
+        }
+        
 };
 
 int main()
 {
     cout << "Dobro došli u Zumkon" << endl
-         << "Vaše pare su naše pare" << endl;
+         << "Vaše pare su naše pare" << endl;/*
     Proizvod p1("test", 1);
     Proizvod p2("test2");
     Proizvod p3;
@@ -63,6 +116,9 @@ int main()
     p3.setCijena(cijena);
     cout << p3.getIme() << " " << p3.getCijena() << endl;
     bool result = p3 == p1;
-    cout << result;
+    cout << result;*/
+
+    Kamen k1 ("Test",25,"P",-1.1);
+    k1.info();
     return 0;
 }
