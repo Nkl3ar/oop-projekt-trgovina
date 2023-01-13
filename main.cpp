@@ -60,11 +60,6 @@ public:
     }
 };
 
-struct naLageru{
-    Proizvod &Proizvod;
-    int kolicina=0;
-};
-
 class Kamen : public Proizvod{
     private:
         float validTezina(const float tezina)
