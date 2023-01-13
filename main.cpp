@@ -43,6 +43,16 @@ public:
 
     }
 
+    static const int getCount()
+    {
+        return ProizvodCount;
+    }
+    static const int getExistCount()
+    {
+        return ProizvodCountStillExists;
+    }
+
+
     const string getIme()
     {
         return ime;
@@ -140,6 +150,15 @@ public:
                         return true;
         return false;
     }
+
+    static const int getCount()
+    {
+        return KamenCount;
+    }
+    static const int getExistCount()
+    {
+        return KamenCountStillExists;
+    }
 };
 
 int Proizvod::ProizvodCount = 0;
@@ -170,11 +189,18 @@ int main()
     Kamen k1("Test", 25, "P", -1.1);
     Kamen k2("Test", 20, "P", -1.1);
     Kamen k3("Test", 25, "P", -1.1);
+    Proizvod p1("test", 1);
     k1.info();
     bool k1k2 = k1 == k2;
     cout << k1k2 << endl;
     bool k1k3 = k1 == k3;
     cout << k1k3 << endl;
+    
+    cout <<"p1.getCount()" << p1.getCount() << endl;
+    cout <<"p1.getExistCount()"<< p1.getExistCount() << endl;
+    cout <<"k3.getExistCount()"<< k1.getExistCount() << endl;
+    cout <<"k3.getCount()"<< k1.getCount() << endl; 
+    
     
     return 0;
 }
