@@ -15,8 +15,8 @@ private:
 
     static void incrementProizvodCount()
     {
-            ProizvodCount++;
-            ProizvodCountStillExists++;
+        ProizvodCount++;
+        ProizvodCountStillExists++;
     }
 
     static int ProizvodCount;
@@ -26,10 +26,11 @@ protected:
     string ime;
     float cijena;
 
-
 public:
-    Proizvod(string ime, float cijena) : ime(ime), cijena(validCijena(cijena)) {
-        incrementProizvodCount();}
+    Proizvod(string ime, float cijena) : ime(ime), cijena(validCijena(cijena))
+    {
+        incrementProizvodCount();
+    }
     Proizvod(string ime)
     {
         this->ime = ime;
@@ -37,10 +38,10 @@ public:
         incrementProizvodCount();
     }
     Proizvod() : Proizvod("", 0) {}
-    ~Proizvod(){
+    ~Proizvod()
+    {
         ProizvodCountStillExists--;
         cout << "Proizvod destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
-
     }
 
     static const int getCount()
@@ -51,7 +52,6 @@ public:
     {
         return ProizvodCountStillExists;
     }
-
 
     const string getIme()
     {
@@ -109,11 +109,13 @@ protected:
     float tezina;
 
 public:
-    Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime, cijena), tip(tip), tezina(validTezina(tezina)) {incrementKamenCount();}Kamen(string ime, float cijena, float tezina) : Kamen(ime, cijena,"",tezina){}
-    Kamen(string ime, float cijena, string tip) : Kamen(ime, cijena,tip,0){}
-    Kamen(string ime, float cijena) : Kamen(ime, cijena,"",0){}
-    Kamen(string ime) : Kamen(ime, 0,"",0){}
-    ~Kamen(){
+    Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime, cijena), tip(tip), tezina(validTezina(tezina)) { incrementKamenCount(); }
+    Kamen(string ime, float cijena, float tezina) : Kamen(ime, cijena, "", tezina) {}
+    Kamen(string ime, float cijena, string tip) : Kamen(ime, cijena, tip, 0) {}
+    Kamen(string ime, float cijena) : Kamen(ime, cijena, "", 0) {}
+    Kamen(string ime) : Kamen(ime, 0, "", 0) {}
+    ~Kamen()
+    {
         Proizvod::~Proizvod();
         cout << "Kamen destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
         KamenCountStillExists--;
@@ -195,12 +197,11 @@ int main()
     cout << k1k2 << endl;
     bool k1k3 = k1 == k3;
     cout << k1k3 << endl;
-    
-    cout <<"p1.getCount()" << p1.getCount() << endl;
-    cout <<"p1.getExistCount()"<< p1.getExistCount() << endl;
-    cout <<"k3.getExistCount()"<< k1.getExistCount() << endl;
-    cout <<"k3.getCount()"<< k1.getCount() << endl; 
-    
-    
+
+    cout << "p1.getCount()" << p1.getCount() << endl;
+    cout << "p1.getExistCount()" << p1.getExistCount() << endl;
+    cout << "k3.getExistCount()" << k1.getExistCount() << endl;
+    cout << "k3.getCount()" << k1.getCount() << endl;
+
     return 0;
 }
