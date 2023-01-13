@@ -10,14 +10,13 @@ private:
 
 public:
     Proizvod(string ime, float cijena) : ime(ime), cijena(cijena) {}
-
-    Proizvod(string ime, float cijena) : ime(ime), cijena(cijena) {}
     Proizvod(string ime)
     {
         this->ime = ime;
         cijena = 0;
     }
     Proizvod() : Proizvod("", 0) {}
+
 
     string getIme()
     {
