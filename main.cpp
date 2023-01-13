@@ -35,8 +35,8 @@ public:
     {
         this->cijena = cijena;
     }
-
-    bool operator==(Proizvod &p)
+    
+    virtual bool operator==(Proizvod &p)
     {
         if (cijena == p.getCijena())
             if (ime == p.getIme())
