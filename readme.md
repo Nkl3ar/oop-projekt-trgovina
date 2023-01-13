@@ -14,8 +14,8 @@ Checklist:
     - [ ] 1 destructor in min. 1 class
     - [ ] initializer lists
     - [ ] constructor delegation
-    - [ ] min. 3 member functions per class
-    - [ ] getters and setters
+    - [ ] min. 3 methods functions per class
+    - [ ] getters and setters (protect integrity)
     - [ ] data encapsulation
     - [ ] min. 1 overloaded operator per class
     - [ ] 1 copy constructor, deep copy
@@ -24,6 +24,26 @@ Checklist:
     - [ ] min. 1 abstract class
     - [ ] public, protected, private elements in a derived class
     - [ ] base constructor calls
+    - [ ] min. 1 static method
+    - [ ] min. 1 static variable
+    - [ ] min. 1 overridden function
+    - [ ] min. 2 virtual member functions
+    - [ ] polymorphism
+    - [ ] virtual destructor
+
+- [ ] Proizvodi:
+    - [X] 2 constructors per class
+    - [ ] 1 destructor in class
+    - [X] initializer lists
+    - [ ] constructor delegation
+    - [ ] 3 methods
+    - [X] getters and setters (protect integrity)
+    - [ ] data encapsulation
+    - [ ] 1 overloaded operator
+    - [ ] 1 copy constructor, deep copy
+    - [X] min. 1 const member function
+    - [ ] public, protected, private elements in a derived class
+    - [X] base constructor calls
     - [ ] min. 1 static method
     - [ ] min. 1 static variable
     - [ ] min. 1 overridden function
