@@ -13,19 +13,32 @@ private:
         return cijena;
     }
 
+    static void incrementProizvodCount()
+    {
+            ProizvodCount++;
+            ProizvodCountStillExists++;
+    }
+
+    static int ProizvodCount;
+    static int ProizvodCountStillExists;
+
 protected:
     string ime;
     float cijena;
 
+
 public:
-    Proizvod(string ime, float cijena) : ime(ime), cijena(validCijena(cijena)) {}
+    Proizvod(string ime, float cijena) : ime(ime), cijena(validCijena(cijena)) {
+        incrementProizvodCount();}
     Proizvod(string ime)
     {
         this->ime = ime;
         cijena = 0;
+        incrementProizvodCount();
     }
     Proizvod() : Proizvod("", 0) {}
     ~Proizvod(){
+        ProizvodCountStillExists--;
         cout << "Proizvod destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
 
     }
@@ -73,16 +86,27 @@ private:
             return 0;
         return tezina;
     }
+    static void incrementKamenCount()
+    {
+        KamenCountStillExists++;
+        KamenCount++;
+    }
+    static int KamenCount;
+    static int KamenCountStillExists;
 
 protected:
     string tip;
     float tezina;
 
 public:
-    Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime, cijena), tip(tip), tezina(validTezina(tezina)) {}
+    Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime, cijena), tip(tip), tezina(validTezina(tezina)) {incrementKamenCount();}Kamen(string ime, float cijena, float tezina) : Kamen(ime, cijena,"",tezina){}
+    Kamen(string ime, float cijena, string tip) : Kamen(ime, cijena,tip,0){}
+    Kamen(string ime, float cijena) : Kamen(ime, cijena,"",0){}
+    Kamen(string ime) : Kamen(ime, 0,"",0){}
     ~Kamen(){
         Proizvod::~Proizvod();
         cout << "Kamen destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
+        KamenCountStillExists--;
     }
 
     const string getTip()
@@ -117,6 +141,11 @@ public:
         return false;
     }
 };
+
+int Proizvod::ProizvodCount = 0;
+int Proizvod::ProizvodCountStillExists = 0;
+int Kamen::KamenCount = 0;
+int Kamen::KamenCountStillExists = 0;
 
 int main()
 {
