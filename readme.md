@@ -36,11 +36,11 @@ Checklist:
     - [X] 2 constructors per class
     - [ ] 1 destructor in class
     - [X] initializer lists
-    - [ ] constructor delegation
+    - [X] constructor delegation
     - [ ] 3 methods (2/3)
     - [X] getters and setters (protect integrity)
-    - [ ] data encapsulation
-    - [ ] 1 overloaded operator
+    - [X] data encapsulation
+    - [X] 1 overloaded operator
     - [ ] 1 copy constructor, deep copy
     - [X] min. 1 const member function
     - [X] public, protected, private elements in a derived class
@@ -49,7 +49,7 @@ Checklist:
     - [ ] min. 1 static variable
     - [ ] min. 1 overridden function
     - [ ] min. 2 virtual member functions
-    - [ ] polymorphism
+    - [X] polymorphism
     - [ ] virtual destructor
 
 Finishing touches:
