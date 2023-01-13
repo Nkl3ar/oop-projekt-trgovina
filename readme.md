@@ -37,7 +37,7 @@ Checklist:
     - [X] 1 destructor in class
     - [X] initializer lists
     - [X] constructor delegation
-    - [ ] 3 methods (2/3)
+    - [X] 3 methods (3/3)
     - [X] getters and setters (protect integrity)
     - [X] data encapsulation
     - [X] 1 overloaded operator
@@ -45,8 +45,8 @@ Checklist:
     - [X] min. 1 const member function
     - [X] public, protected, private elements in a derived class
     - [X] base constructor calls
-    - [ ] min. 1 static method
-    - [ ] min. 1 static variable
+    - [X] min. 1 static method
+    - [X] min. 1 static variable
     - [ ] min. 1 overridden function
     - [ ] min. 2 virtual member functions
     - [X] polymorphism
