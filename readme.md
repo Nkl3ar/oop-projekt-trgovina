@@ -4,7 +4,8 @@ Checklist:
     - [ ] branching
     - [ ] loops
     - [ ] logic operators
-    - [ ] pointers, references
+    - [ ] pointers
+    - [ ] references
     - [ ] preprocessor directives
     - [ ] one-dimensional arrays
 

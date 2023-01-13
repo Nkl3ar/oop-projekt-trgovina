@@ -2,7 +2,6 @@
 using std::cout, std::cin, std::endl;
 using std::string;
 
-
 class Proizvod
 {
 private:
@@ -17,13 +16,6 @@ public:
         cijena = 0;
     }
     Proizvod() : Proizvod("", 0) {}
-
-    bool operator==(Proizvod &p){
-        if(cijena == p.getCijena())
-            if(ime == p.getIme())
-                return true;
-        return false;
-    }
 
     const string getIme()
     {
@@ -42,6 +34,14 @@ public:
     void setCijena(float const cijena)
     {
         this->cijena = cijena;
+    }
+
+    bool operator==(Proizvod &p)
+    {
+        if (cijena == p.getCijena())
+            if (ime == p.getIme())
+                return true;
+        return false;
     }
 };
 
@@ -62,7 +62,7 @@ int main()
     cin >> cijena;
     p3.setCijena(cijena);
     cout << p3.getIme() << " " << p3.getCijena() << endl;
-    bool result = p3==p1;
+    bool result = p3 == p1;
     cout << result;
     return 0;
 }
