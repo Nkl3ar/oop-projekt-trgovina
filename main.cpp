@@ -25,6 +25,10 @@ public:
         cijena = 0;
     }
     Proizvod() : Proizvod("", 0) {}
+    ~Proizvod(){
+        cout << "Proizvod destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
+
+    }
 
     const string getIme()
     {
@@ -76,6 +80,11 @@ protected:
 
 public:
     Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime, cijena), tip(tip), tezina(validTezina(tezina)) {}
+    ~Kamen(){
+        Proizvod::~Proizvod();
+        cout << "Kamen destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
+    }
+
     const string getTip()
     {
         return tip;
@@ -137,5 +146,6 @@ int main()
     cout << k1k2 << endl;
     bool k1k3 = k1 == k3;
     cout << k1k3 << endl;
+    
     return 0;
 }

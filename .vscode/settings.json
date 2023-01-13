@@ -1,3 +1,6 @@
 {
 "isGitignoreExtActive": true,
+"files.associations": {
+    "iostream": "cpp"
+},
 }
