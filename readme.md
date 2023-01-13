@@ -1,6 +1,6 @@
 Checklist:
 
-- [ ]general:
+- [ ] general:
     - [ ] branching
     - [ ] loops
     - [ ] logic operators
