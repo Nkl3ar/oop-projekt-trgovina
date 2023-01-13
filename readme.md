@@ -34,7 +34,7 @@ Checklist:
 
 - [ ] Proizvodi:
     - [X] 2 constructors per class
-    - [ ] 1 destructor in class
+    - [X] 1 destructor in class
     - [X] initializer lists
     - [X] constructor delegation
     - [ ] 3 methods (2/3)
@@ -50,11 +50,11 @@ Checklist:
     - [ ] min. 1 overridden function
     - [ ] min. 2 virtual member functions
     - [X] polymorphism
-    - [ ] virtual destructor
+    - [X] virtual destructor
 
 Finishing touches:
 - [ ] separate into headers
 
-- [ ] exceptions :
+- [ ] exceptions/interrupts/usererror/ :
     - [ ] two member functions utilizing them
     - [ ] one self-made exception
