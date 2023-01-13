@@ -45,7 +45,7 @@ public:
         this->cijena = validCijena(cijena);
     }
 
-    virtual bool operator==(Proizvod &p)
+    bool operator==(Proizvod &p)
     {
         if (cijena == p.getCijena())
             if (ime == p.getIme())
@@ -58,6 +58,11 @@ public:
         cout << "Ime: " << ime << endl;
         cout << "Cijena: " << cijena << endl;
     }
+};
+
+struct naLageru{
+    Proizvod &Proizvod;
+    int kolicina=0;
 };
 
 class Kamen : public Proizvod{
@@ -95,6 +100,15 @@ class Kamen : public Proizvod{
             cout << "Tip: " << tip << endl;
             cout << "Tezina: " << tezina << endl;
         }
+        bool operator==(Kamen &k)
+        {
+        if (cijena == k.getCijena())
+            if (ime == k.getIme())
+                if(tip == k.getTip())
+                    if(tezina == k.getTezina())
+                        return true;
+        return false;
+        }
         
 };
 
@@ -119,6 +133,12 @@ int main()
     cout << result;*/
 
     Kamen k1 ("Test",25,"P",-1.1);
+    Kamen k2 ("Test",20,"P",-1.1);
+    Kamen k3 ("Test",25,"P",-1.1);
     k1.info();
+    bool k1k2 = k1 == k2;
+    cout << k1k2 << endl;
+    bool k1k3 = k1 == k3;
+    cout << k1k3 << endl;
     return 0;
 }
