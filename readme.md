@@ -10,7 +10,7 @@ Checklist:
     - [X] one-dimensional arrays
 
 - [ ] classes:
-    - [/] min. 3 classes, utilized (1 base, 2 inherited)
+    - [ ] min. 3 classes, utilized (1 base, 2 inherited)
     - [x] 2 constructors per class
     - [X] 1 destructor in min. 1 class
     - [ ] initializer lists
