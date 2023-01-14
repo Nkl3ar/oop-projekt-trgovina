@@ -3,8 +3,6 @@
 using std::cout, std::cin, std::endl;
 using std::string;
 
-
-
 class Kamen : public Proizvod
 {
 private:
@@ -80,9 +78,6 @@ public:
         return KamenCountStillExists;
     }
 };
-
-int Proizvod::ProizvodCount = 0;
-int Proizvod::ProizvodCountStillExists = 0;
 
 int Kamen::KamenCount = 0;
 int Kamen::KamenCountStillExists = 0;

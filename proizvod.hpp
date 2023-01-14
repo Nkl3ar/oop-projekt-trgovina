@@ -27,6 +27,6 @@ public:
     void setIme(const string);
     const float getCijena();
     void setCijena(const float);
-    bool operator==(Proizvod&);
+    bool operator==(Proizvod &);
     void info();
 };
