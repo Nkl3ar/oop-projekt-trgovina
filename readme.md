@@ -1,63 +1,21 @@
 Checklist:
 
-- [x] general:
-    - [X] branching
-    - [X] loops
-    - [X] logic operators
-    - [x] pointers
-    - [x] references
-    - [x] preprocessor directives
-    - [X] one-dimensional arrays
-
 - [ ] classes:
+    - [ ] 1 pointer used as variable
+    - [ ] 1 class used as a type of data in another
     - [ ] min. 3 classes, utilized (1 base, 2 inherited)
-    - [x] 2 constructors per class
-    - [X] 1 destructor in min. 1 class
-    - [ ] initializer lists
-    - [ ] constructor delegation
-    - [ ] min. 3 methods functions per class
-    - [X] getters and setters (protect integrity)
-    - [ ] data encapsulation
-    - [ ] min. 1 overloaded operator per class
-    - [X] 1 copy constructor, deep copy
-    - [ ] min. 1 const member function per class
-    - [ ] one base class, two derived classes
-    - [ ] min. 1 abstract class
-    - [ ] public, protected, private elements in a derived class
-    - [ ] base constructor calls
-    - [ ] min. 1 static method
-    - [ ] min. 1 static variable
-    - [ ] min. 1 overridden function
-    - [ ] min. 2 virtual member functions
-    - [ ] polymorphism
-    - [ ] virtual destructor
+    - [ ] 1 abstract class
+    - [ ] hide and show base class methods (myb, doesnt seem to make that much sense in this project)
+    - [ ] 2 virtual methods
 
-- [ ] Proizvodi:
-    - [X] 2 constructors per class
-    - [X] 1 destructor in class
-    - [X] initializer lists
-    - [X] constructor delegation
-    - [X] 3 methods (3/3)
-    - [X] getters and setters (protect integrity)
-    - [X] data encapsulation
-    - [X] 1 overloaded operator
-    - [X] 1 copy constructor, deep copy
-    - [X] min. 1 const member function
-    - [X] public, protected, private elements in a derived class
-    - [X] base constructor calls
-    - [X] min. 1 static method
-    - [X] min. 1 static variable
-    - [X] min. 1 overridden function
-    - [ ] min. 2 virtual member functions
-    - [X] polymorphism
-    - [X] virtual destructor
-    - [X] separate into headers
-
-Finishing touches:
-- [X] separate into headers
-
-- [ ] exceptions/interrupts/usererror/ :
+- [ ] exceptions/interrupts/usererror :
     - [ ] two member functions utilizing them
     - [ ] one self-made exception
 
 - [ ] templates
+    - [ ] 1 function template with unknown paremeter, must return same type of unknown
+    - [ ] 1 function with multiple unknown paremeters
+    - [ ] base class
+        - [ ] 1 unknown datatype T
+        - [ ] 1 method that works with unknown datatype
+        - [ ] 1 operator
