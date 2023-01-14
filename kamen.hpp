@@ -17,17 +17,17 @@ protected:
     float tezina;
 
 public:
-    Kamen(string , float , string , float );
-    Kamen(string , float , float );
-    Kamen(string , float , string );
-    Kamen(string , float );
-    Kamen(string );
+    Kamen(string, float, string, float);
+    Kamen(string, float, float);
+    Kamen(string, float, string);
+    Kamen(string, float);
+    Kamen(string);
     Kamen(Kamen &);
     ~Kamen();
     const string getTip();
-    void setTip(string );
+    void setTip(string);
     const float getTezina();
-    void setTezina(float );
+    void setTezina(float);
     void info();
     bool operator==(Kamen &);
     static const int getCount();

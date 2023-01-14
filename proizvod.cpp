@@ -10,9 +10,9 @@ Cijena Proizvod::validCijena(const Cijena cijena)
 {
     if (cijena.vrijednost < 0)
     {
-        Cijena valid = {0,cijena.valuta};
+        Cijena valid = {0, cijena.valuta};
         return valid;
-        }
+    }
     return cijena;
 }
 
@@ -27,30 +27,31 @@ Proizvod::Proizvod(string ime, Cijena cijena) : ime(ime), cijena(validCijena(cij
     incrementProizvodCount();
 }
 
-
-    Proizvod::Proizvod(string ime, float vrijednost, string valuta) : Proizvod(ime,{vrijednost,valuta}){}
-    Proizvod::Proizvod(string ime, float vrijednost) : Proizvod(ime,{vrijednost,"EUR"}){}
-
+Proizvod::Proizvod(string ime, float vrijednost, string valuta) : Proizvod(ime, {vrijednost, valuta}) {}
+Proizvod::Proizvod(string ime, float vrijednost) : Proizvod(ime, {vrijednost, "EUR"}) {}
 
 Proizvod::Proizvod(string ime)
 {
     this->ime = ime;
-    cijena = {0,"EUR"};
+    cijena = {0, "EUR"};
     incrementProizvodCount();
 }
-Proizvod::Proizvod() : Proizvod("", {0,"EUR"}) {}
+Proizvod::Proizvod() : Proizvod("", {0, "EUR"}) {}
 
-Proizvod::Proizvod(Proizvod* p){
-    if(p!=nullptr){
-    ime = p->getIme();
-    cijena = p->getCijena();
-    incrementProizvodCount();}
-    else{
-        ime = "";
-        cijena = {0,""};
-        //TODO: PUT EXCEPTION HERE INSTEAD
+Proizvod::Proizvod(Proizvod *p)
+{
+    if (p != nullptr)
+    {
+        ime = p->getIme();
+        cijena = p->getCijena();
+        incrementProizvodCount();
     }
-    
+    else
+    {
+        ime = "";
+        cijena = {0, ""};
+        // TODO: PUT EXCEPTION HERE INSTEAD
+    }
 }
 
 /*Proizvod::Proizvod(Proizvod &p)
@@ -90,7 +91,7 @@ const Cijena Proizvod::getCijena()
 
 const string Proizvod::getCijenaAsString()
 {
-    string assemble = std::to_string(cijena.vrijednost)+" "+cijena.valuta;
+    string assemble = std::to_string(cijena.vrijednost) + " " + cijena.valuta;
     return assemble;
 }
 
@@ -101,21 +102,21 @@ void Proizvod::setCijena(const Cijena cijena)
 
 void Proizvod::setCijena(const float vrijednost)
 {
-    this->cijena = validCijena({vrijednost,cijena.valuta});
+    this->cijena = validCijena({vrijednost, cijena.valuta});
 }
 
 void Proizvod::setCijena(const float vrijednost, const string valuta)
 {
-    this->cijena = validCijena({vrijednost,valuta});
+    this->cijena = validCijena({vrijednost, valuta});
 }
 
 bool Proizvod::operator==(Proizvod &p)
 {
     Cijena cijenaCompare = p.getCijena();
     if (cijena.vrijednost == cijenaCompare.vrijednost)
-        if(cijena.valuta == cijena.valuta)
-        if (ime == p.getIme())
-            return true;
+        if (cijena.valuta == cijena.valuta)
+            if (ime == p.getIme())
+                return true;
     return false;
 }
 

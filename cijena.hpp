@@ -2,7 +2,8 @@
 #define CIJENA_H
 
 #include <iostream>
-struct Cijena{
+struct Cijena
+{
     float vrijednost;
     std::string valuta;
 };

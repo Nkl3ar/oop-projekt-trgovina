@@ -9,15 +9,15 @@ using std::string;
 int main()
 {
     cout << "Dobro došli u Zumkon" << endl
-         << "Vaše pare su naše pare" << endl; 
-    Proizvod p1("Jana",500);
+         << "Vaše pare su naše pare" << endl;
+    Proizvod p1("Jana", 500);
     Proizvod p2(&p1);
     if (p1 == p2)
     {
         cout << "p1 i p2 su isti" << endl;
     };
-    Cijena cijenaKarla = {0.56,"HRK"};
-    Proizvod p3("Karlo",cijenaKarla);
+    Cijena cijenaKarla = {0.56, "HRK"};
+    Proizvod p3("Karlo", cijenaKarla);
     if (p1 == p3)
     {
         cout << "p1 i p3 su isti" << endl;
@@ -30,9 +30,8 @@ int main()
     p3.setIme("Jana s okusom Hmelja");
     p3.setCijena(20);
 
-    p1.setCijena({0.10,"USD"});
+    p1.setCijena({0.10, "USD"});
 
-    
     cout << "Info o Jani" << endl;
     p1.info();
     cout << "Info o Jani 2" << endl;
@@ -42,9 +41,7 @@ int main()
 
     cout << "Broj proizvoda: " << p1.getCount();
 
-    Kamen k1("Kamen",25.2,"Mokar");
-
-    
+    Kamen k1("Kamen", 25.2, "Mokar");
 
     return 0;
 }

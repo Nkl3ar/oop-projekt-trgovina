@@ -9,20 +9,22 @@ private:
     static void incrementOdjecaCount();
     static int OdjecaCount;
     static int OdjecaCountStillExists;
+
 protected:
     string tip;
     string velicina;
+
 public:
-    Odjeca(string , float , string , string);
-    Odjeca(string , float , string);
-    Odjeca(string , float);
+    Odjeca(string, float, string, string);
+    Odjeca(string, float, string);
+    Odjeca(string, float);
     Odjeca(string);
     ~Odjeca();
 
     const string getTip();
-    void setTip(string );
+    void setTip(string);
     const string getVelicina();
-    void setVelicina(string );
+    void setVelicina(string);
     void info();
     bool operator==(Odjeca &);
     static const int getCount();

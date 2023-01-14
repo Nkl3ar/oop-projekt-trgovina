@@ -1,12 +1,12 @@
-//#pragma once
+// #pragma once
 #ifndef PROIZVOD_H
 #define PROIZVOD_H
-
 
 #include <iostream>
 #include "cijena.hpp"
 using std::string;
-class Proizvod{
+class Proizvod
+{
 
 private:
     Cijena validCijena(const Cijena cijena);
@@ -25,8 +25,8 @@ public:
     Proizvod(string, float, string);
     Proizvod(string, float);
     Proizvod(string);
-    Proizvod(Proizvod*);
-    //Proizvod(Proizvod&);
+    Proizvod(Proizvod *);
+    // Proizvod(Proizvod&);
     Proizvod();
     ~Proizvod();
     static const int getCount();
