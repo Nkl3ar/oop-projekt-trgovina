@@ -1,91 +1,9 @@
 #include <iostream>
+#include "proizvod.hpp"
 using std::cout, std::cin, std::endl;
 using std::string;
 
-class Proizvod
-{
 
-private:
-    double validCijena(const float cijena)
-    {
-        if (cijena < 0)
-            return 0;
-        return cijena;
-    }
-
-    static void incrementProizvodCount()
-    {
-        ProizvodCount++;
-        ProizvodCountStillExists++;
-    }
-
-    static int ProizvodCount;
-    static int ProizvodCountStillExists;
-
-protected:
-    string ime;
-    float cijena;
-
-public:
-    Proizvod(string ime, float cijena) : ime(ime), cijena(validCijena(cijena))
-    {
-        incrementProizvodCount();
-    }
-    Proizvod(string ime)
-    {
-        this->ime = ime;
-        cijena = 0;
-        incrementProizvodCount();
-    }
-    Proizvod() : Proizvod("", 0) {}
-    ~Proizvod()
-    {
-        ProizvodCountStillExists--;
-        cout << "Proizvod destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
-    }
-
-    static const int getCount()
-    {
-        return ProizvodCount;
-    }
-    static const int getExistCount()
-    {
-        return ProizvodCountStillExists;
-    }
-
-    const string getIme()
-    {
-        return ime;
-    }
-    void setIme(const string ime)
-    {
-        this->ime = ime;
-    }
-
-    const float getCijena()
-    {
-        return cijena;
-    }
-
-    void setCijena(const float cijena)
-    {
-        this->cijena = validCijena(cijena);
-    }
-
-    bool operator==(Proizvod &p)
-    {
-        if (cijena == p.getCijena())
-            if (ime == p.getIme())
-                return true;
-        return false;
-    }
-
-    void info()
-    {
-        cout << "Ime: " << ime << endl;
-        cout << "Cijena: " << cijena << endl;
-    }
-};
 
 class Kamen : public Proizvod
 {
@@ -165,6 +83,7 @@ public:
 
 int Proizvod::ProizvodCount = 0;
 int Proizvod::ProizvodCountStillExists = 0;
+
 int Kamen::KamenCount = 0;
 int Kamen::KamenCountStillExists = 0;
 
