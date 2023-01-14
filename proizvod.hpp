@@ -1,9 +1,12 @@
 #include <iostream>
 #include "cijena.hpp"
-#pragma once
+
+
+//#pragma once
 
 using std::string;
-
+#ifndef PROIZVOD_H
+#define PROIZVOD_H
 class Proizvod{
 
 private:
@@ -39,3 +42,4 @@ public:
     bool operator==(Proizvod &);
     void info();
 };
+#endif
