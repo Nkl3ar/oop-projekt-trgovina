@@ -80,7 +80,7 @@ public:
         return false;
     }
 
-    virtual void info()
+    void info()
     {
         cout << "Ime: " << ime << endl;
         cout << "Cijena: " << cijena << endl;
@@ -137,7 +137,7 @@ public:
     {
         this->tezina = tezina;
     }
-    virtual void info() override
+    void info()
     {
         Proizvod::info();
         cout << "Tip: " << tip << endl;
