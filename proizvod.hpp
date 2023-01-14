@@ -1,12 +1,11 @@
-#include <iostream>
-#include "cijena.hpp"
-
-
 //#pragma once
-
-using std::string;
 #ifndef PROIZVOD_H
 #define PROIZVOD_H
+
+
+#include <iostream>
+#include "cijena.hpp"
+using std::string;
 class Proizvod{
 
 private:
@@ -27,7 +26,7 @@ public:
     Proizvod(string, float);
     Proizvod(string);
     Proizvod(Proizvod*);
-    Proizvod(Proizvod&);
+    //Proizvod(Proizvod&);
     Proizvod();
     ~Proizvod();
     static const int getCount();

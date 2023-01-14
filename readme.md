@@ -1,9 +1,10 @@
 Checklist:
 
 - [ ] classes:
-    - [ ] 1 pointer used as variable
+    - [ ] 1 pointer used as variable in class
     - [ ] 1 class used as a type of data in another
-    - [ ] min. 3 classes, utilized (1 base, 2 inherited)
+    - [X] min. 3 classes, utilized
+             (1 base, 2 inherited)
     - [ ] 1 abstract class
     - [ ] hide and show base class methods (myb, doesnt seem to make that much sense in this project)
     - [ ] 2 virtual methods

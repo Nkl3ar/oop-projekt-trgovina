@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include "kamen.hpp"
 using std::cout, std::endl;
 using std::string;

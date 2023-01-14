@@ -1,5 +1,3 @@
-#include <iostream>
-#include "proizvod.hpp"
 #include "odjeca.hpp"
 
 using std::cout, std::endl;

@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include "proizvod.hpp"
 using std::cout, std::endl;
 using std::string;
@@ -41,16 +41,23 @@ Proizvod::Proizvod(string ime)
 Proizvod::Proizvod() : Proizvod("", {0,"EUR"}) {}
 
 Proizvod::Proizvod(Proizvod* p){
+    if(p!=nullptr){
     ime = p->getIme();
     cijena = p->getCijena();
+    incrementProizvodCount();}
+    else{
+        ime = "";
+        cijena = {0,""};
+        //TODO: PUT EXCEPTION HERE INSTEAD
+    }
     
 }
 
-Proizvod::Proizvod(Proizvod &p)
+/*Proizvod::Proizvod(Proizvod &p)
 {
     ime = p.getIme();
     cijena = p.getCijena();
-}
+}*/
 
 Proizvod::~Proizvod()
 {

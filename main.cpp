@@ -1,46 +1,48 @@
 #include <iostream>
-#include "odjeca.hpp"
-#include "kamen.hpp"
-
 
 using std::cout, std::cin, std::endl;
 using std::string;
 
-
+#include "odjeca.hpp"
+#include "kamen.hpp"
 
 int main()
-{/*
+{
     cout << "Dobro došli u Zumkon" << endl
          << "Vaše pare su naše pare" << endl; 
-     Proizvod p1("test", 1);
-     Proizvod p2("test2");
-     Proizvod p3;
-     cout << p1.getIme() << " " << p1.getCijenaAsString() << endl;
-     cout << p2.getIme() << " " << p2.getCijenaAsString() << endl;
-     cout << p3.getIme() << " " << p3.getCijenaAsString() << endl;
-     string unos;
-     cin >> unos;
-     p3.setIme(unos);
-     float cijena;
-     cin >> cijena;
-     p3.setCijena(cijena);
-     cout << p3.getIme() << " " << p3.getCijenaAsString() << endl;
-     bool result = p3 == p1;
-     cout << result;*/
+    Proizvod p1("Jana",500);
+    Proizvod p2(&p1);
+    if (p1 == p2)
+    {
+        cout << "p1 i p2 su isti" << endl;
+    };
+    Cijena cijenaKarla = {0.56,"HRK"};
+    Proizvod p3("Karlo",cijenaKarla);
+    if (p1 == p3)
+    {
+        cout << "p1 i p3 su isti" << endl;
+    };
+    cout << "Info o Jani" << endl;
+    p2.info();
+    cout << "Info o Karlu" << endl;
+    p3.info();
 
-   Odjeca o1("Test", 25, "P", "M");
-    Odjeca o2("Test", 25, "P", "M");
-    Odjeca o3("Test", 25, "P", "XM");
+    p3.setIme("Jana s okusom Hmelja");
+    p3.setCijena(20);
+
+    p1.setCijena({0.10,"USD"});
+
     
-    Proizvod p1("test", 1);
-    o1.info();
-    o2.info();
-    o3.info();
-    bool o1o2 = o1 == o2;
-    cout << o1o2 << endl;
-    bool o1o3 = o1 == o3;
-    cout << o1o3 << endl;
+    cout << "Info o Jani" << endl;
+    p1.info();
+    cout << "Info o Jani 2" << endl;
+    p2.info();
+    cout << "Info o bivšem Karlu" << endl;
+    p3.info();
 
+    cout << "Broj proizvoda: " << p1.getCount();
+
+    
 
     return 0;
 }

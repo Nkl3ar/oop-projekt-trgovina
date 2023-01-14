@@ -1,4 +1,3 @@
-#include <iostream>
 #include "proizvod.hpp"
 
 using std::string;
