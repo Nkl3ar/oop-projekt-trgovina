@@ -1,25 +1,25 @@
 Checklist:
 
 - [ ] general:
-    - [ ] branching
-    - [ ] loops
-    - [ ] logic operators
+    - [X] branching
+    - [X] loops
+    - [X] logic operators
     - [ ] pointers
     - [ ] references
     - [ ] preprocessor directives
-    - [ ] one-dimensional arrays
+    - [X] one-dimensional arrays
 
 - [ ] classes:
     - [ ] min. 3 classes, utilized
     - [ ] 2 constructors per class
-    - [ ] 1 destructor in min. 1 class
+    - [X] 1 destructor in min. 1 class
     - [ ] initializer lists
     - [ ] constructor delegation
     - [ ] min. 3 methods functions per class
     - [ ] getters and setters (protect integrity)
     - [ ] data encapsulation
     - [ ] min. 1 overloaded operator per class
-    - [ ] 1 copy constructor, deep copy
+    - [X] 1 copy constructor, deep copy
     - [ ] min. 1 const member function per class
     - [ ] one base class, two derived classes
     - [ ] min. 1 abstract class
@@ -54,7 +54,7 @@ Checklist:
     - [X] separate into headers
 
 Finishing touches:
-- [ ] separate into headers
+- [X] separate into headers
 
 - [ ] exceptions/interrupts/usererror/ :
     - [ ] two member functions utilizing them

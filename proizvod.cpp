@@ -39,10 +39,22 @@ Proizvod::Proizvod(string ime)
     incrementProizvodCount();
 }
 Proizvod::Proizvod() : Proizvod("", {0,"EUR"}) {}
+
+Proizvod::Proizvod(Proizvod* p){
+    ime = p->getIme();
+    cijena = p->getCijena();
+    
+}
+
+Proizvod::Proizvod(Proizvod &p)
+{
+    ime = p.getIme();
+    cijena = p.getCijena();
+}
+
 Proizvod::~Proizvod()
 {
     ProizvodCountStillExists--;
-    cout << "Proizvod destroyed (⌐ ͡■ ͜ʖ ͡■)" << endl;
 }
 
 const int Proizvod::getCount()
