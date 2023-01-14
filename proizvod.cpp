@@ -6,10 +6,13 @@ using std::string;
 int Proizvod::ProizvodCount = 0;
 int Proizvod::ProizvodCountStillExists = 0;
 
-double Proizvod::validCijena(const float cijena)
+Cijena Proizvod::validCijena(const Cijena cijena)
 {
-    if (cijena < 0)
-        return 0;
+    if (cijena.vrijednost < 0)
+    {
+        Cijena valid = {0,cijena.valuta};
+        return valid;
+        }
     return cijena;
 }
 
@@ -19,17 +22,23 @@ void Proizvod::incrementProizvodCount()
     ProizvodCountStillExists++;
 }
 
-Proizvod::Proizvod(string ime, float cijena) : ime(ime), cijena(validCijena(cijena))
+Proizvod::Proizvod(string ime, Cijena cijena) : ime(ime), cijena(validCijena(cijena))
 {
     incrementProizvodCount();
 }
+
+
+    Proizvod::Proizvod(string ime, float vrijednost, string valuta) : Proizvod(ime,{vrijednost,valuta}){}
+    Proizvod::Proizvod(string ime, float vrijednost) : Proizvod(ime,{vrijednost,"EUR"}){}
+
+
 Proizvod::Proizvod(string ime)
 {
     this->ime = ime;
-    cijena = 0;
+    cijena = {0,"EUR"};
     incrementProizvodCount();
 }
-Proizvod::Proizvod() : Proizvod("", 0) {}
+Proizvod::Proizvod() : Proizvod("", {0,"EUR"}) {}
 Proizvod::~Proizvod()
 {
     ProizvodCountStillExists--;
@@ -55,19 +64,37 @@ void Proizvod::setIme(const string ime)
     this->ime = ime;
 }
 
-const float Proizvod::getCijena()
+const Cijena Proizvod::getCijena()
 {
     return cijena;
 }
 
-void Proizvod::setCijena(const float cijena)
+const string Proizvod::getCijenaAsString()
+{
+    string assemble = std::to_string(cijena.vrijednost)+" "+cijena.valuta;
+    return assemble;
+}
+
+void Proizvod::setCijena(const Cijena cijena)
 {
     this->cijena = validCijena(cijena);
 }
 
+void Proizvod::setCijena(const float vrijednost)
+{
+    this->cijena = validCijena({vrijednost,cijena.valuta});
+}
+
+void Proizvod::setCijena(const float vrijednost, const string valuta)
+{
+    this->cijena = validCijena({vrijednost,valuta});
+}
+
 bool Proizvod::operator==(Proizvod &p)
 {
-    if (cijena == p.getCijena())
+    Cijena cijenaCompare = p.getCijena();
+    if (cijena.vrijednost == cijenaCompare.vrijednost)
+        if(cijena.valuta == cijena.valuta)
         if (ime == p.getIme())
             return true;
     return false;
@@ -76,5 +103,5 @@ bool Proizvod::operator==(Proizvod &p)
 void Proizvod::info()
 {
     cout << "Ime: " << ime << endl;
-    cout << "Cijena: " << cijena << endl;
+    cout << "Cijena: " << cijena.vrijednost << " " << cijena.valuta << endl;
 }

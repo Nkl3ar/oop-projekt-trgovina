@@ -2,7 +2,7 @@
 #include "proizvod.hpp"
 using std::cout, std::cin, std::endl;
 using std::string;
-
+/*
 class Kamen : public Proizvod
 {
 private:
@@ -81,27 +81,27 @@ public:
 
 int Kamen::KamenCount = 0;
 int Kamen::KamenCountStillExists = 0;
-
+*/
 int main()
 {
     cout << "Dobro došli u Zumkon" << endl
-         << "Vaše pare su naše pare" << endl; /*
+         << "Vaše pare su naše pare" << endl; 
      Proizvod p1("test", 1);
      Proizvod p2("test2");
      Proizvod p3;
-     cout << p1.getIme() << " " << p1.getCijena() << endl;
-     cout << p2.getIme() << " " << p2.getCijena() << endl;
-     cout << p3.getIme() << " " << p3.getCijena() << endl;
+     cout << p1.getIme() << " " << p1.getCijenaAsString() << endl;
+     cout << p2.getIme() << " " << p2.getCijenaAsString() << endl;
+     cout << p3.getIme() << " " << p3.getCijenaAsString() << endl;
      string unos;
      cin >> unos;
      p3.setIme(unos);
      float cijena;
      cin >> cijena;
      p3.setCijena(cijena);
-     cout << p3.getIme() << " " << p3.getCijena() << endl;
+     cout << p3.getIme() << " " << p3.getCijenaAsString() << endl;
      bool result = p3 == p1;
-     cout << result;*/
-
+     cout << result;
+/*
     Kamen k1("Test", 25, "P", -1.1);
     Kamen k2("Test", 20, "P", -1.1);
     Kamen k3("Test", 25, "P", -1.1);
@@ -115,7 +115,7 @@ int main()
     cout << "p1.getCount()" << p1.getCount() << endl;
     cout << "p1.getExistCount()" << p1.getExistCount() << endl;
     cout << "k3.getExistCount()" << k1.getExistCount() << endl;
-    cout << "k3.getCount()" << k1.getCount() << endl;
+    cout << "k3.getCount()" << k1.getCount() << endl;*/
 
     return 0;
 }

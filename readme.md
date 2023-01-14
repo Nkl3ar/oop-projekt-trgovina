@@ -51,6 +51,7 @@ Checklist:
     - [ ] min. 2 virtual member functions
     - [X] polymorphism
     - [X] virtual destructor
+    - [X] separate into headers
 
 Finishing touches:
 - [ ] separate into headers

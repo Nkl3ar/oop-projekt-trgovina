@@ -1,11 +1,12 @@
 #include <iostream>
+#include "cijena.h"
 using std::string;
 
 class Proizvod
 {
 
 private:
-    double validCijena(const float);
+    Cijena validCijena(const Cijena cijena);
 
     static void incrementProizvodCount();
 
@@ -14,9 +15,11 @@ private:
 
 protected:
     string ime;
-    float cijena;
+    Cijena cijena;
 
 public:
+    Proizvod(string, Cijena);
+    Proizvod(string, float, string);
     Proizvod(string, float);
     Proizvod(string);
     Proizvod();
@@ -25,8 +28,11 @@ public:
     static const int getExistCount();
     const string getIme();
     void setIme(const string);
-    const float getCijena();
+    const Cijena getCijena();
+    const string getCijenaAsString();
     void setCijena(const float);
+    void setCijena(const float, const string);
+    void setCijena(const Cijena);
     bool operator==(Proizvod &);
     void info();
 };
