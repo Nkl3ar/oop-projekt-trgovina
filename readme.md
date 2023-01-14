@@ -47,7 +47,7 @@ Checklist:
     - [X] base constructor calls
     - [X] min. 1 static method
     - [X] min. 1 static variable
-    - [ ] min. 1 overridden function
+    - [X] min. 1 overridden function
     - [ ] min. 2 virtual member functions
     - [X] polymorphism
     - [X] virtual destructor

@@ -1,8 +1,9 @@
 #include <iostream>
 #include "proizvod.hpp"
+#pragma once "cijena.h"
 using std::cout, std::cin, std::endl;
 using std::string;
-/*
+
 class Kamen : public Proizvod
 {
 private:
@@ -61,7 +62,9 @@ public:
     }
     bool operator==(Kamen &k)
     {
-        if (cijena == k.getCijena())
+    Cijena cijenaCompare = k.getCijena();
+    if (cijena.vrijednost == cijenaCompare.vrijednost)
+        if(cijena.valuta == cijena.valuta)
             if (ime == k.getIme())
                 if (tip == k.getTip())
                     if (tezina == k.getTezina())
@@ -81,9 +84,9 @@ public:
 
 int Kamen::KamenCount = 0;
 int Kamen::KamenCountStillExists = 0;
-*/
+
 int main()
-{
+{/*
     cout << "Dobro došli u Zumkon" << endl
          << "Vaše pare su naše pare" << endl; 
      Proizvod p1("test", 1);
@@ -100,8 +103,8 @@ int main()
      p3.setCijena(cijena);
      cout << p3.getIme() << " " << p3.getCijenaAsString() << endl;
      bool result = p3 == p1;
-     cout << result;
-/*
+     cout << result;*/
+
     Kamen k1("Test", 25, "P", -1.1);
     Kamen k2("Test", 20, "P", -1.1);
     Kamen k3("Test", 25, "P", -1.1);
@@ -115,7 +118,7 @@ int main()
     cout << "p1.getCount()" << p1.getCount() << endl;
     cout << "p1.getExistCount()" << p1.getExistCount() << endl;
     cout << "k3.getExistCount()" << k1.getExistCount() << endl;
-    cout << "k3.getCount()" << k1.getCount() << endl;*/
+    cout << "k3.getCount()" << k1.getCount() << endl;
 
     return 0;
 }
