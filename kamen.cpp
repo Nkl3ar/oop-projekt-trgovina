@@ -15,6 +15,14 @@ using std::string;
         KamenCount++;
     }
 
+    Kamen::Kamen(Kamen &Kamen){
+        ime = Kamen.getIme();
+        cijena = Kamen.getCijena();
+        tip = Kamen.getTip();
+        tezina = Kamen.getTezina();
+
+    }
+
     Kamen::Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime, cijena), tip(tip), tezina(validTezina(tezina)) { incrementKamenCount(); }
     Kamen::Kamen(string ime, float cijena, float tezina) : Kamen(ime, cijena, "", tezina) {}
     Kamen::Kamen(string ime, float cijena, string tip) : Kamen(ime, cijena, tip, 0) {}

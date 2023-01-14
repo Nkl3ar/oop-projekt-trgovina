@@ -22,6 +22,7 @@ public:
     Kamen(string , float , string );
     Kamen(string , float );
     Kamen(string );
+    Kamen(Kamen &);
     ~Kamen();
     const string getTip();
     void setTip(string );

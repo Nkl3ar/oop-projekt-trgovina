@@ -42,6 +42,8 @@ int main()
 
     cout << "Broj proizvoda: " << p1.getCount();
 
+    Kamen k1("Kamen",25.2,"Mokar");
+
     
 
     return 0;
