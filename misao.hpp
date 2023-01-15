@@ -1,20 +1,22 @@
 #include "osoba.hpp"
 
 template <typename T>
-class Misao {
+class Misao
+{
 private:
     T misao;
-    Osoba* osoba;
+    Osoba *osoba;
+
 public:
-    Misao(T misao, Osoba* osoba) : misao(misao),osoba(osoba){}
-    Misao(T misao) : Misao(misao,nullptr){}
-    Misao() : Misao(""){}
-    ~Misao(){}
+    Misao(T misao, Osoba *osoba) : misao(misao), osoba(osoba) {}
+    Misao(T misao) : Misao(misao, nullptr) {}
+    Misao() : Misao("") {}
+    ~Misao() {}
 
     void info()
     {
         std::cout << "Misao: " << misao << std::endl;
-        if(osoba!=nullptr)
+        if (osoba != nullptr)
         {
             std::cout << "Pripada osobi: " << std::endl;
             osoba->info();
@@ -23,11 +25,11 @@ public:
             std::cout << "Ne pripada ikakvoj osobi." << std::endl;
     }
 
-    void setOsoba(Osoba* osoba)
+    void setOsoba(Osoba *osoba)
     {
-        this->osoba=osoba;
+        this->osoba = osoba;
     }
-    Osoba* getOsoba()
+    Osoba *getOsoba()
     {
         return osoba;
     }
@@ -37,11 +39,11 @@ public:
     }
     void setMisao(T misao)
     {
-        this->misao=misao;
+        this->misao = misao;
     }
     bool operator==(Misao &m)
     {
-        if(misao==m.getMisao())
+        if (misao == m.getMisao())
             return true;
         return false;
     }

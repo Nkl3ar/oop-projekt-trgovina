@@ -1,5 +1,6 @@
 #include <iostream>
-class Iznimka {
+class Iznimka
+{
 public:
   std::string opis;
   Iznimka(std::string);

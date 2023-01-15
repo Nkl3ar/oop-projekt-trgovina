@@ -9,7 +9,7 @@ using std::string;
 #include "misao.hpp"
 #include "veci.hpp"
 #include "mixedInfo.hpp"
-
+#include "iznimka.hpp"
 int main()
 {
     cout << "Dobro došli u Zumkon" << endl
@@ -51,7 +51,8 @@ int main()
     if (k1 == k2)
     {
         cout << "k1 i k2 su isti" << endl;
-    };if (k1 == k3)
+    };
+    if (k1 == k3)
     {
         cout << "k1 i k3 su isti" << endl;
     };
@@ -63,13 +64,14 @@ int main()
     k3.info();
     cout << "Kamen cijena: " << k1.getCijenaAsString() << endl;
 
-    Odjeca o1("Crna majica",20.25,"Majica", "M");
+    Odjeca o1("Crna majica", 20.25, "Majica", "M");
     Odjeca o2(o1);
-    Odjeca o3("Crna majica",20.25,"Majica");
+    Odjeca o3("Crna majica", 20.25, "Majica");
     if (o1 == o2)
     {
         cout << "o1 i o2 su isti" << endl;
-    };if (o1 == o3)
+    };
+    if (o1 == o3)
     {
         cout << "o1 i o3 su isti" << endl;
     };
@@ -80,20 +82,37 @@ int main()
     std::cout << "KamenCount:" << k1.getCount() << endl;
     std::cout << "ProizvodCount:" << p1.getCount() << endl;
 
-    Kupac g1("Ivo","Sanader",70);
+    Kupac g1("Ivo", "Sanader", 70);
     g1.info();
     std::cout << "Šansa za rođendanski poklon: " << g1.sansaZaRodjendanskiPoklon() << "%" << std::endl;
     g1.kolikoGodinaZivotaPreostalo();
-    Misao m1("Kupi Inu nazad",&g1);
+    Misao m1("Kupi Inu nazad", &g1);
     m1.info();
 
     g1.dodajUKosaricu(&o1);
     g1.ispisiKosaricu();
 
-    std::cout << veci(12,2) << std::endl;
-    std::cout << veci(12.5,2.5) << std::endl;
-    std::cout << veci("a","b") << std::endl;
-    mixedInfo(g1,k1);
+    std::cout << veci(12, 2) << std::endl;
+    std::cout << veci(12.5, 2.5) << std::endl;
+    std::cout << veci("a", "b") << std::endl;
+    mixedInfo(g1, k1);
+    try
+    {
+        g1.dodajUKosaricu(nullptr);
+    }
+    catch (Iznimka &i)
+    {
+        cout << i.getOpis() << endl;
+    }
+
+    try
+    {
+        Proizvod p5(nullptr);
+    }
+    catch (Iznimka &i)
+    {
+        cout << i.getOpis() << endl;
+    }
 
     return 0;
 }

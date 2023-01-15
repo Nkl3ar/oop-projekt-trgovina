@@ -3,6 +3,7 @@
 #include <cmath>
 #include <sstream>
 #include <iomanip>
+#include "iznimkamorapostojati.hpp"
 
 using std::cout, std::endl;
 using std::string;
@@ -52,9 +53,7 @@ Proizvod::Proizvod(Proizvod *p)
     }
     else
     {
-        ime = "";
-        cijena = {0, ""};
-        // TODO: PUT EXCEPTION HERE INSTEAD
+        throw IznimkaMoraPostojati();
     }
 }
 

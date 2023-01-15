@@ -19,7 +19,7 @@ public:
     Odjeca(string, float, string);
     Odjeca(string, float);
     Odjeca(string);
-    Odjeca(Odjeca&);
+    Odjeca(Odjeca &);
     ~Odjeca();
 
     const string getTip();

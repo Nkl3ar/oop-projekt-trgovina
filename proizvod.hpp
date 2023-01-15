@@ -26,7 +26,7 @@ public:
     Proizvod(string, float);
     Proizvod(string);
     Proizvod(Proizvod *);
-    Proizvod(Proizvod&);
+    Proizvod(Proizvod &);
     Proizvod();
     ~Proizvod();
     static const int getCount();
