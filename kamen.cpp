@@ -21,6 +21,7 @@ Kamen::Kamen(Kamen &Kamen)
     cijena = Kamen.getCijena();
     tip = Kamen.getTip();
     tezina = Kamen.getTezina();
+    incrementKamenCount();
 }
 
 Kamen::Kamen(string ime, float cijena, string tip, float tezina) : Proizvod(ime, cijena), tip(tip), tezina(validTezina(tezina)) { incrementKamenCount(); }
@@ -28,6 +29,7 @@ Kamen::Kamen(string ime, float cijena, float tezina) : Kamen(ime, cijena, "", te
 Kamen::Kamen(string ime, float cijena, string tip) : Kamen(ime, cijena, tip, 0) {}
 Kamen::Kamen(string ime, float cijena) : Kamen(ime, cijena, "", 0) {}
 Kamen::Kamen(string ime) : Kamen(ime, 0, "", 0) {}
+
 Kamen::~Kamen()
 {
     KamenCountStillExists--;

@@ -5,6 +5,7 @@ using std::string;
 
 #include "odjeca.hpp"
 #include "kamen.hpp"
+#include "gradjanin.hpp"
 
 int main()
 {
@@ -58,6 +59,32 @@ int main()
     cout << "Info o Kamenu2" << endl;
     k3.info();
     cout << "Kamen cijena: " << k1.getCijenaAsString() << endl;
+
+    Odjeca o1("Crna majica",20.25,"Majica", "M");
+    Odjeca o2(o1);
+    Odjeca o3("Crna majica",20.25,"Majica");
+    if (o1 == o2)
+    {
+        cout << "o1 i o2 su isti" << endl;
+    };if (o1 == o3)
+    {
+        cout << "o1 i o3 su isti" << endl;
+    };
+    o1.info();
+    o2.info();
+    o3.info();
+    std::cout << "OdjecaCount:" << o1.getCount() << endl;
+    std::cout << "KamenCount:" << k1.getCount() << endl;
+    std::cout << "ProizvodCount:" << p1.getCount() << endl;
+
+    Gradjanin g1("Ivo","Sanader",70);
+    g1.info();
+    std::cout << "Šansa za rođendanski poklon: " << g1.sansaZaRodjendanskiPoklon() << "%" << std::endl;
+    g1.kolikoGodinaZivotaPreostalo();
+    
+    
+    
+
 
 
     return 0;

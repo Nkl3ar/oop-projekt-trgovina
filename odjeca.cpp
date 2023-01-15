@@ -5,6 +5,8 @@ using std::string;
 
 string Odjeca::validVelicina(string velicina)
 {
+    if(velicina.length() == 0)
+        return "M";
     for (int x = 0; x < velicina.length(); x++)
         velicina[x] = (toupper(velicina[x]));
 
@@ -35,6 +37,13 @@ Odjeca::Odjeca(string ime, float cijena, string tip, string velicina) : Proizvod
 Odjeca::Odjeca(string ime, float cijena, string tip) : Odjeca(ime, cijena, tip, "") {}
 Odjeca::Odjeca(string ime, float cijena) : Odjeca(ime, cijena, "", "") {}
 Odjeca::Odjeca(string ime) : Odjeca(ime, 0, "", "") {}
+Odjeca::Odjeca(Odjeca &o){
+    ime=o.getIme();
+    cijena=o.getCijena();
+    tip=o.getTip();
+    velicina=o.getVelicina();
+    incrementOdjecaCount();
+}
 Odjeca::~Odjeca()
 {
     OdjecaCountStillExists--;
