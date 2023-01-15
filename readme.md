@@ -1,6 +1,6 @@
 Checklist:
 
-- [ ] classes:
+- [X] classes:
     - [X] 1 pointer used as variable in class
     - [X] 1 class used as a type of data in another
     - [X] min. 3 classes, utilized

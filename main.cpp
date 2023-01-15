@@ -5,8 +5,9 @@ using std::string;
 
 #include "odjeca.hpp"
 #include "kamen.hpp"
-#include "gradjanin.hpp"
+#include "kupac.hpp"
 #include "misao.hpp"
+#include "veci.hpp"
 
 int main()
 {
@@ -78,12 +79,19 @@ int main()
     std::cout << "KamenCount:" << k1.getCount() << endl;
     std::cout << "ProizvodCount:" << p1.getCount() << endl;
 
-    Gradjanin g1("Ivo","Sanader",70);
+    Kupac g1("Ivo","Sanader",70);
     g1.info();
     std::cout << "Šansa za rođendanski poklon: " << g1.sansaZaRodjendanskiPoklon() << "%" << std::endl;
     g1.kolikoGodinaZivotaPreostalo();
-    Misao m1("Prodaj Inu",&g1);
+    Misao m1("Kupi Inu nazad",&g1);
     m1.info();
+
+    g1.dodajUKosaricu(&o1);
+    g1.ispisiKosaricu();
+
+    std::cout << veci(12,2) << std::endl;
+    std::cout << veci(12.5,2.5) << std::endl;
+    std::cout << veci("a","b") << std::endl;
     
     
     

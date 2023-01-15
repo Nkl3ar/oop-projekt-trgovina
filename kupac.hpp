@@ -1,14 +1,22 @@
 #include "osoba.hpp"
+#include <vector>
+#include "proizvod.hpp"
+ 
+using namespace std;
 
-class Gradjanin : public Osoba{
+class Kupac : public Osoba{
+    private:
+        std::vector<Proizvod*> kosarica;
     public:
-    
-        Gradjanin(string,string,int);
-        Gradjanin(string,string);
-        Gradjanin(string,int);
-        Gradjanin(string);
-        Gradjanin(int);
-        Gradjanin();
+        Kupac(string,string,int);
+        Kupac(string,string);
+        Kupac(string,int);
+        Kupac(string);
+        Kupac(int);
+        Kupac();
+        void isprazniKosaricu();
+        void dodajUKosaricu(Proizvod*);
+        void ispisiKosaricu();
         virtual void kolikoGodinaZivotaPreostalo(){
             if(90-godina<=0)
             {
