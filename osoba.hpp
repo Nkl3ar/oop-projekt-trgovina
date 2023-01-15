@@ -1,3 +1,6 @@
+// #pragma once
+#ifndef OSOBA_H
+#define OSOBA_H
 
 #include <iostream>
 using std::string;
@@ -28,3 +31,5 @@ class Osoba{
 
 
 };
+
+#endif

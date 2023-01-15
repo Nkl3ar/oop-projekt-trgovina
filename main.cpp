@@ -6,6 +6,7 @@ using std::string;
 #include "odjeca.hpp"
 #include "kamen.hpp"
 #include "gradjanin.hpp"
+#include "misao.hpp"
 
 int main()
 {
@@ -81,6 +82,8 @@ int main()
     g1.info();
     std::cout << "Šansa za rođendanski poklon: " << g1.sansaZaRodjendanskiPoklon() << "%" << std::endl;
     g1.kolikoGodinaZivotaPreostalo();
+    Misao m1("Prodaj Inu",&g1);
+    m1.info();
     
     
     
