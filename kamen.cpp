@@ -6,7 +6,7 @@ using std::string;
 float Kamen::validTezina(const float tezina)
 {
     if (tezina < 0)
-        return 0;
+        throw std::underflow_error("Tezina ne smije biti manja od 0.");
     return tezina;
 }
 void Kamen::incrementKamenCount()
@@ -49,7 +49,7 @@ const float Kamen::getTezina()
 }
 void Kamen::setTezina(float tezina)
 {
-    this->tezina = tezina;
+    this->tezina = validTezina(tezina);
 }
 void Kamen::info()
 {
@@ -59,14 +59,22 @@ void Kamen::info()
 }
 bool Kamen::operator==(Kamen &k)
 {
-    Cijena cijenaCompare = k.getCijena();
-    if (cijena.vrijednost == cijenaCompare.vrijednost)
-        if (cijena.valuta == cijena.valuta)
-            if (ime == k.getIme())
-                if (tip == k.getTip())
-                    if (tezina == k.getTezina())
-                        return true;
-    return false;
+    try
+    {
+        Cijena cijenaCompare = k.getCijena();
+        if (cijena.vrijednost == cijenaCompare.vrijednost)
+            if (cijena.valuta == cijena.valuta)
+                if (ime == k.getIme())
+                    if (tip == k.getTip())
+                        if (tezina == k.getTezina())
+                            return true;
+        return false;
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+        return false;
+    }
 }
 
 const int Kamen::getCount()

@@ -15,8 +15,9 @@ Cijena Proizvod::validCijena(const Cijena cijena)
 {
     if (cijena.vrijednost < 0)
     {
-        Cijena valid = {0, cijena.valuta};
-        return valid;
+        throw std::underflow_error("Cijena ne smije biti manja od 0.");
+        // Cijena valid = {0, cijena.valuta};
+        // return valid;
     }
     return cijena;
 }

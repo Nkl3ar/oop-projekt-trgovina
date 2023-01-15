@@ -23,7 +23,7 @@ public:
     {
         if (90 - godina <= 0)
         {
-            std::cout << "Čudo je što ste živi, now die :)" << std::endl;
+            std::cout << "Čudo je što ste živi :)" << std::endl;
         }
         else
         {

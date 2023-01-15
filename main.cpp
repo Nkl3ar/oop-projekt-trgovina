@@ -114,5 +114,23 @@ int main()
         cout << i.getOpis() << endl;
     }
 
+    try
+    {
+        o1.setCijena(-50);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
+    try
+    {
+        k1.setTezina(-50);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+
     return 0;
 }
