@@ -8,6 +8,7 @@ using std::string;
 #include "kupac.hpp"
 #include "misao.hpp"
 #include "veci.hpp"
+#include "mixedInfo.hpp"
 
 int main()
 {
@@ -92,11 +93,7 @@ int main()
     std::cout << veci(12,2) << std::endl;
     std::cout << veci(12.5,2.5) << std::endl;
     std::cout << veci("a","b") << std::endl;
-    
-    
-    
-
-
+    mixedInfo(g1,k1);
 
     return 0;
 }

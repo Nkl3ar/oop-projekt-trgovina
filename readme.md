@@ -14,8 +14,8 @@ Checklist:
     - [ ] one self-made exception
 
 - [ ] templates
-    - [ ] 1 function template with unknown paremeter, must return same type of unknown
-    - [ ] 1 function with multiple unknown paremeters
+    - [X] 1 function template with unknown paremeter, must return same type of unknown
+    - [X] 1 function with multiple unknown paremeters
     - [X] base class
         - [X] 1 unknown datatype T
         - [X] 1 method that works with unknown datatype
