@@ -1,5 +1,9 @@
 
 #include "proizvod.hpp"
+#include <cmath>
+#include <sstream>
+#include <iomanip>
+
 using std::cout, std::endl;
 using std::string;
 
@@ -54,11 +58,11 @@ Proizvod::Proizvod(Proizvod *p)
     }
 }
 
-/*Proizvod::Proizvod(Proizvod &p)
+Proizvod::Proizvod(Proizvod &p)
 {
     ime = p.getIme();
     cijena = p.getCijena();
-}*/
+}
 
 Proizvod::~Proizvod()
 {
@@ -91,7 +95,10 @@ const Cijena Proizvod::getCijena()
 
 const string Proizvod::getCijenaAsString()
 {
-    string assemble = std::to_string(cijena.vrijednost) + " " + cijena.valuta;
+
+    std::stringstream stream;
+    stream << std::fixed << std::setprecision(2) << floor(cijena.vrijednost * 100.0) / 100.0;
+    string assemble = stream.str() + " " + cijena.valuta;
     return assemble;
 }
 
@@ -123,5 +130,5 @@ bool Proizvod::operator==(Proizvod &p)
 void Proizvod::info()
 {
     cout << "Ime: " << ime << endl;
-    cout << "Cijena: " << cijena.vrijednost << " " << cijena.valuta << endl;
+    cout << "Cijena: " << getCijenaAsString() << endl;
 }

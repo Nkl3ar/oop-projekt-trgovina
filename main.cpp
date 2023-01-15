@@ -42,6 +42,23 @@ int main()
     cout << "Broj proizvoda: " << p1.getCount();
 
     Kamen k1("Kamen", 25.2, "Mokar");
+    Kamen k2(k1);
+    Kamen k3("Kamen2", 20);
+    if (k1 == k2)
+    {
+        cout << "k1 i k2 su isti" << endl;
+    };if (k1 == k3)
+    {
+        cout << "k1 i k3 su isti" << endl;
+    };
+    cout << "Info o Kamenu" << endl;
+    k1.info();
+    cout << "Info o Kamenu" << endl;
+    k2.info();
+    cout << "Info o Kamenu2" << endl;
+    k3.info();
+    cout << "Kamen cijena: " << k1.getCijenaAsString() << endl;
+
 
     return 0;
 }

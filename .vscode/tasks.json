@@ -6,8 +6,8 @@
             "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
-                "${workspaceFolder}/*.hpp",
-                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}\\*.hpp",
+                "${workspaceFolder}\\*.cpp",
                 "-g",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
@@ -27,8 +27,8 @@
             "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
-                "${workspaceFolder}/*.hpp",
-                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}\\*.hpp",
+                "${workspaceFolder}\\*.cpp",
                 "-g",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
@@ -44,26 +44,6 @@
                 "isDefault": true
             },
             "detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: cpp.exe build active file",
-            "command": "C:\\msys64\\mingw64\\bin\\cpp.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "compiler: C:\\msys64\\mingw64\\bin\\cpp.exe"
         }
     ],
     "version": "2.0.0"
