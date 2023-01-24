@@ -36,3 +36,7 @@ void Osoba::info()
     std::cout << "Prezime: " << prezime << std::endl;
     std::cout << "Godina: " << godina << std::endl;
 }
+float Osoba::sansaZaRodjendanskiPoklon()
+{
+    return abs((90 - godina));
+}

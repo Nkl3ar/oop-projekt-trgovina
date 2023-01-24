@@ -78,23 +78,27 @@ int main()
     o1.info();
     o2.info();
     o3.info();
-    std::cout << "OdjecaCount:" << o1.getCount() << endl;
-    std::cout << "KamenCount:" << k1.getCount() << endl;
-    std::cout << "ProizvodCount:" << p1.getCount() << endl;
+    cout << "OdjecaCount:" << o1.getCount() << endl;
+    cout << "KamenCount:" << k1.getCount() << endl;
+    cout << "ProizvodCount:" << p1.getCount() << endl;
 
     Kupac g1("Ivo", "Sanader", 70);
     g1.info();
-    std::cout << "Šansa za rođendanski poklon: " << g1.sansaZaRodjendanskiPoklon() << "%" << std::endl;
+    cout << "Šansa za rođendanski poklon: " << g1.sansaZaRodjendanskiPoklon() << "%" << endl;
     g1.kolikoGodinaZivotaPreostalo();
-    Misao m1("Kupi Inu nazad", &g1);
+    
+    //na replu, kod template klasa treba dodati tip podataka
+    //inače mi radi bez, ali eto, repl gonna repl
+    //Misao m1("Kupi Inu nazad", &g1);
+    Misao<string> m1("Kupi Inu nazad", &g1);
     m1.info();
 
     g1.dodajUKosaricu(&o1);
     g1.ispisiKosaricu();
 
-    std::cout << veci(12, 2) << std::endl;
-    std::cout << veci(12.5, 2.5) << std::endl;
-    std::cout << veci("a", "b") << std::endl;
+    cout << veci(12, 2) << endl;
+    cout << veci(12.5, 2.5) << endl;
+    cout << veci("a", "b") << endl;
     mixedInfo(g1, k1);
     try
     {
@@ -120,7 +124,7 @@ int main()
     }
     catch (std::exception &e)
     {
-        std::cout << e.what() << std::endl;
+        cout << e.what() << endl;
     }
 
     try
@@ -129,7 +133,7 @@ int main()
     }
     catch (std::exception &e)
     {
-        std::cout << e.what() << std::endl;
+        cout << e.what() << endl;
     }
 
     return 0;

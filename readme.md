@@ -1,22 +1,30 @@
-Checklist:
+U mainu su primjeri korištenja funkcija
 
-- [X] classes:
-    - [X] 1 pointer used as variable in class
-    - [X] 1 class used as a type of data in another
-    - [X] min. 3 classes, utilized
-             (1 base, 2 inherited)
-    - [X] 1 abstract class
-    - [ ] hide and show base class methods (myb, doesnt seem to make that much sense in this project)
-    - [X] 2 virtual methods
+Cijena - struktura podataka, sprema vrijednost i valuta (npr. 20 HRK, 39.23 EUR)
 
-- [ ] exceptions/interrupts/usererror :
-    - [ ] two member functions utilizing them
-    - [ ] one self-made exception
+Veci, MixedInfo - template funkcije
+misao           - template klasa
 
-- [ ] templates
-    - [X] 1 function template with unknown paremeter, must return same type of unknown
-    - [X] 1 function with multiple unknown paremeters
-    - [X] base class
-        - [X] 1 unknown datatype T
-        - [X] 1 method that works with unknown datatype
-        - [X] 1 operator
+Osoba - primjer abstraktne bazne klase
+Kupac - nasljeđuje Osobu
+      - primjer polimorfizma, košarica (vector koji sprema pointere na proizvode)
+
+Proizvod - primjer bazne klase
+         - također imaju static metodu i varijablu (counter postojećih proizvoda)
+         - override operatora ==
+         - copy constructor preko pointer i reference
+
+Kamen, Odjeca - Nasljeduju Proizvod
+              - također imaju static metodu i varijablu (counter)
+              - override operatora ==
+              - copy constructor preko reference
+
+Iznimka, IznimkaMoraPostojati - ručno napisane iznimke
+
+Kamen,Proizvod,Kupac - baca iznimku
+                     - Kupac i Proizvod bacaju ručno napisane iznimke
+                     - Kamen i Proizvod bacaju built in iznimke
+
+sve klase imaju osnovne gettere, settere i neke metode relevantne njima (info, validacija podataka)
+
+vjerojatno ima još tog ali sam zaboravio

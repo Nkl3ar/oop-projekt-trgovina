@@ -27,10 +27,7 @@ public:
     void setGodina(int);
     void info();
     virtual void kolikoGodinaZivotaPreostalo() = 0;
-    virtual float sansaZaRodjendanskiPoklon()
-    {
-        return abs((90 - godina));
-    }
+    virtual float sansaZaRodjendanskiPoklon();
 };
 
 #endif

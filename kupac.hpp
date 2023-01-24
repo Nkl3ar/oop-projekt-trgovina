@@ -19,23 +19,6 @@ public:
     void isprazniKosaricu();
     void dodajUKosaricu(Proizvod *);
     void ispisiKosaricu();
-    virtual void kolikoGodinaZivotaPreostalo()
-    {
-        if (90 - godina <= 0)
-        {
-            std::cout << "Čudo je što ste živi :)" << std::endl;
-        }
-        else
-        {
-            std::cout << "Imate još " << 90 - godina << " godina života preostalo :)" << std::endl;
-        }
-    }
-    virtual float sansaZaRodjendanskiPoklon()
-    {
-        if (godina > 30 && godina < 60)
-            return 0.00001;
-        if (godina > 0 && godina < 10)
-            return 90;
-        return abs((90 - godina));
-    }
+    virtual void kolikoGodinaZivotaPreostalo() override;
+    virtual float sansaZaRodjendanskiPoklon() override;
 };

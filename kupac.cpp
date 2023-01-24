@@ -30,3 +30,23 @@ void Kupac::ispisiKosaricu()
         std::cout << n->getIme() << " ";
     std::cout << std::endl;
 }
+float Kupac::sansaZaRodjendanskiPoklon()
+    {
+        if (godina > 30 && godina < 60)
+            return 0.00001;
+        if (godina > 0 && godina < 10)
+            return 90;
+        return abs((90 - godina));
+    }
+
+void Kupac::kolikoGodinaZivotaPreostalo() 
+    {
+        if (90 - godina <= 0)
+        {
+            std::cout << "Čudo je što ste živi :)" << std::endl;
+        }
+        else
+        {
+            std::cout << "Imate još " << 90 - godina << " godina života preostalo :)" << std::endl;
+        }
+    }
