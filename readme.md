@@ -11,12 +11,9 @@ Kupac - nasljeđuje Osobu
 
 Proizvod - primjer bazne klase
 
-
          - također imaju static metodu i varijablu (counter postojećih proizvoda)
 
-
          - override operatora ==
-
 
          - copy constructor preko pointer i reference
 
