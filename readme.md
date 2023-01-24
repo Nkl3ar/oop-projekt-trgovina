@@ -10,8 +10,14 @@ Kupac - nasljeđuje Osobu
       - primjer polimorfizma, košarica (vector koji sprema pointere na proizvode)
 
 Proizvod - primjer bazne klase
+
+
          - također imaju static metodu i varijablu (counter postojećih proizvoda)
+
+
          - override operatora ==
+
+
          - copy constructor preko pointer i reference
 
 Kamen, Odjeca - Nasljeduju Proizvod
